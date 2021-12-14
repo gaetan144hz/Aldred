@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class LadderSpawn : MonoBehaviour
 {
     [SerializeField] private float floatScaler;
+    //[SerializeField] private int waiting;
     private bool isButtonPressed;
 
     public GameObject ladderPrefab;
@@ -16,8 +17,7 @@ public class LadderSpawn : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
 
     private void Awake()
-    {
-        
+    {        
         /*quand input performed stop coroutine
         //et quand canceled j'active le rb pour laisser tomber l'echelle rb en kinematic et dynamic quand c 'est relaché
         faire un bool dans une coroutine
@@ -42,6 +42,7 @@ public class LadderSpawn : MonoBehaviour
         {
             isButtonPressed = false;
             rb.bodyType = RigidbodyType2D.Dynamic;
+            //StartCoroutine(wait());
             return;
         }       
     }
@@ -55,6 +56,16 @@ public class LadderSpawn : MonoBehaviour
         }
     }
 
+    /*
+    private IEnumerator wait()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waiting);
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+    }
+    */
     public void ladderSpawn()
     {        
         lastLadder = Instantiate(ladderPrefab, new Vector3(spawnPoint.position.x + 1f, spawnPoint.position.y), ladderPrefab.transform.rotation);

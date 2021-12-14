@@ -1,19 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    [SerializeField] Movement movement;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
     public GameObject dieEffect;
     public CameraShake cameraShake;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Awake()
+    {
+        movement = GetComponent<Movement>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DeathZone")
         {
             Instantiate(dieEffect, transform.position, Quaternion.identity);
             StartCoroutine(cameraShake.Shake(.20f, .8f));
-            Destroy(gameObject);
+            Destroy(spriteRenderer);
+            Destroy(movement);
+            Destroy(dieEffect);
+            SceneManager.LoadScene(0); 
+            //SceneManager.LoadScene("nomDeLaScene");
         }
     }
 }

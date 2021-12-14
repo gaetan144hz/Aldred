@@ -7,10 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent (typeof(BoxCollider2D))]
 public class Movement : MonoBehaviour
 {
-
     public Rigidbody2D rb;
-
-    private PlayerInput playerInput;
 
     [SerializeField] float moveSpeed = 3;
 
@@ -18,6 +15,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()

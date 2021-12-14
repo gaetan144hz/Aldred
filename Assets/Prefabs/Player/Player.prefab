@@ -161,8 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69e777496ae64942a392f6ccf35462e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 4612832224762551586}
+  spriteRenderer: {fileID: 4612832224762551599}
   dieEffect: {fileID: 9045606874042932642, guid: dd471f88eb27f6047a1d5cd281e00ed6, type: 3}
-  cameraShake: {fileID: 2655434666771518838, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
+  cameraShake: {fileID: 0}
 --- !u!114 &7143484874353283495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatScaler: 0.05
+  floatScaler: 0.25
+  waiting: 5
   ladderPrefab: {fileID: 1683353656628207021, guid: a4a3f292c77cc2d44a5cd69399eb35f8, type: 3}
   spawnPoint: {fileID: 4612832224762551598}
 --- !u!114 &4612832224762551593
