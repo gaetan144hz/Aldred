@@ -24,10 +24,10 @@ public class Movement : MonoBehaviour
     {
         rb.velocity = new Vector2 (horizontal * moveSpeed, rb.velocity.y);
     }
-    public void OnMove(InputValue value)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
-        SetVelocity(value.Get<Vector2>());
-        //SetVelocity(ctx.ReadValue<Vector2>());
+        //SetVelocity(value.Get<Vector2>());
+        SetVelocity(ctx.ReadValue<Vector2>());
     }
 
     public void SetVelocity(Vector2 direction)
