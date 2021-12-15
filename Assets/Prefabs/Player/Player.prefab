@@ -161,8 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69e777496ae64942a392f6ccf35462e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 4612832224762551586}
+  spriteRenderer: {fileID: 4612832224762551599}
   dieEffect: {fileID: 9045606874042932642, guid: dd471f88eb27f6047a1d5cd281e00ed6, type: 3}
-  cameraShake: {fileID: 2655434666771518838, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
+  cameraShake: {fileID: 0}
 --- !u!114 &7143484874353283495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ladder: {fileID: 7195135287941520897, guid: 500e373ba9288344d91a156bad5bf6e8, type: 3}
+  floatScaler: 0.25
+  waiting: 5
+  ladderPrefab: {fileID: 1683353656628207021, guid: a4a3f292c77cc2d44a5cd69399eb35f8, type: 3}
   spawnPoint: {fileID: 4612832224762551598}
 --- !u!114 &4612832224762551593
 MonoBehaviour:
@@ -190,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 3cce59c2d1cee7b478b9af1d8ebfa349, type: 3}
-  m_NotificationBehavior: 1
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -222,8 +226,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7143484874353283495}
         m_TargetAssemblyTypeName: LadderSpawn, Assembly-CSharp
-        m_MethodName: ladderSpawn
-        m_Mode: 1
+        m_MethodName: OnSpawn
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
