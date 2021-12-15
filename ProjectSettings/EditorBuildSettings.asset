@@ -11,5 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu principal.unity
     guid: d559f4f17f3a37349805de072a00cab8
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: cc3dfb93f4417344caf0a9dd5b19ad5a
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreenScene.unity
+    guid: cdd5f4d0dfe46bc479921e72375462cf
+  - enabled: 1
+    path: Assets/Scenes/OptionScene.unity
+    guid: e01eba852c8a9da4e950b9026b9ac373
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 74273fe0c827cbf4fa65dce587af63c5, type: 2}
