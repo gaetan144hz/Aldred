@@ -965,7 +965,6 @@ MonoBehaviour:
   movement: {fileID: 4612832224762551586}
   spriteRenderer: {fileID: 4612832224762551599}
   dieEffect: {fileID: 9045606874042932642, guid: dd471f88eb27f6047a1d5cd281e00ed6, type: 3}
-  cameraShake: {fileID: 0}
 --- !u!114 &7143484874353283495
 MonoBehaviour:
   m_ObjectHideFlags: 0

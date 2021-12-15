@@ -9,7 +9,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
 
     public GameObject dieEffect;
-    public CameraShake cameraShake;
+    //public CameraShake cameraShake;
 
     private void Awake()
     {
@@ -22,10 +22,10 @@ public class PlayerDeath : MonoBehaviour
         if (collision.tag == "DeathZone")
         {
             Instantiate(dieEffect, transform.position, Quaternion.identity);
-            StartCoroutine(cameraShake.Shake(.20f, .8f));
-            Destroy(spriteRenderer);
-            Destroy(movement);
-            Destroy(dieEffect);
+            //StartCoroutine(cameraShake.Shake(.20f, .8f));
+            Destroy(this.spriteRenderer);
+            Destroy(this.movement);
+            Destroy(this.dieEffect);
             SceneManager.LoadScene(0); 
             //SceneManager.LoadScene("nomDeLaScene");
         }
