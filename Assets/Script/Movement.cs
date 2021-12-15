@@ -13,7 +13,12 @@ public class Movement : MonoBehaviour
 
     private float horizontal;
 
-    private void Start()
+    private void OnEnable()
+    {
+        Time.timeScale = 1.0f;
+    }
+
+    private void Awake()
     {
         Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody2D>();

@@ -177,9 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatScaler: 0.25
-  waiting: 5
+  floatScaler: 0.1
   ladderPrefab: {fileID: 1683353656628207021, guid: a4a3f292c77cc2d44a5cd69399eb35f8, type: 3}
+  lastLadder: {fileID: 0}
+  rb: {fileID: 0}
   spawnPoint: {fileID: 4612832224762551598}
 --- !u!114 &4612832224762551593
 MonoBehaviour:

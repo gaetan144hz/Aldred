@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3434545203891246666}
   - component: {fileID: 1766204840817107457}
   - component: {fileID: 2921638020229088935}
+  - component: {fileID: 630160515443932550}
   m_Layer: 0
   m_Name: Ladder
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieEffect: {fileID: 779856463022657376, guid: 6d138ae4d3cda1740811cb598d1041cd, type: 3}
+--- !u!114 &630160515443932550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683353656628207021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b9760bb253acd4d8227460b5da325b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
