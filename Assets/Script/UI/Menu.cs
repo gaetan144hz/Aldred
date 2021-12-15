@@ -5,6 +5,6 @@ public class Menu : MonoBehaviour
 {
     public void menu()
     {
-        SceneManager.LoadScene(1); //MenuPrincipal
+        SceneManager.LoadScene(0); //MenuPrincipal
     }
 }

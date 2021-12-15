@@ -8,7 +8,7 @@ public class GameLoader : MonoBehaviour
 {
     public void LevelLoader()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
         Time.timeScale = 1.0f;
     }
 }
