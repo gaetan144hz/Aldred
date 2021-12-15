@@ -10,9 +10,9 @@ public class LadderSpawn : MonoBehaviour
     private bool isButtonPressed;
 
     public GameObject ladderPrefab;
-    private GameObject lastLadder;
+    public GameObject lastLadder;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [SerializeField] private Transform spawnPoint;
 
@@ -55,13 +55,12 @@ public class LadderSpawn : MonoBehaviour
             yield return null;
         }
     }
-
     /*
-    private IEnumerator wait()
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        while (true)
+        if (collision.gameObject.tag == "ladderCollider")
         {
-            yield return new WaitForSeconds(waiting);
+            rb.gravityScale = 0;
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
     }

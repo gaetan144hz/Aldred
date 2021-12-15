@@ -12,7 +12,6 @@ public class ladderDeath : MonoBehaviour
         {
             Instantiate(dieEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
-            Destroy(dieEffect);
         }
     }
 }

@@ -19,7 +19,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "DeathZone")
+        if (collision.tag == "DeathZone")
         {
             Instantiate(dieEffect, transform.position, Quaternion.identity);
             StartCoroutine(cameraShake.Shake(.20f, .8f));

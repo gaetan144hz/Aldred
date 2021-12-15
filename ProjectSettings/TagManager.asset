@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeathZone
+  - ladderCollider
   layers:
   - Default
   - TransparentFX
