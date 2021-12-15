@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Offset: {x: 0, y: 1.56, z: 0}
+  m_Offset: {x: 0, y: 1.25, z: 0}
   m_ApplyAfter: 1
   m_PreserveComposition: 0
 --- !u!1 &7566289764557860898

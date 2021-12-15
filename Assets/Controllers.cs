@@ -33,6 +33,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Hold""
+                },
+                {
+                    ""name"": ""pause/resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""3dfa362a-78c8-4534-9995-75338797298f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -83,7 +91,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6978c7cd-a5d0-4b16-89ed-8bacf585f7c5"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard/Mouse"",
@@ -99,6 +107,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""spawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3628a5c1-922c-44f2-9b15-13921b0455de"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard/Mouse"",
+                    ""action"": ""pause/resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f80a516-50ab-4d1c-9b41-d36648f3d4db"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""pause/resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -144,6 +174,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player = asset.FindActionMap("player", throwIfNotFound: true);
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_spawn = m_player.FindAction("spawn", throwIfNotFound: true);
+        m_player_pauseresume = m_player.FindAction("pause/resume", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -195,12 +226,14 @@ public class @Controllers : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_spawn;
+    private readonly InputAction m_player_pauseresume;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
         public PlayerActions(@Controllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @spawn => m_Wrapper.m_player_spawn;
+        public InputAction @pauseresume => m_Wrapper.m_player_pauseresume;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -216,6 +249,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @spawn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
                 @spawn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
                 @spawn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
+                @pauseresume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
+                @pauseresume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
+                @pauseresume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -226,6 +262,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @spawn.started += instance.OnSpawn;
                 @spawn.performed += instance.OnSpawn;
                 @spawn.canceled += instance.OnSpawn;
+                @pauseresume.started += instance.OnPauseresume;
+                @pauseresume.performed += instance.OnPauseresume;
+                @pauseresume.canceled += instance.OnPauseresume;
             }
         }
     }
@@ -252,5 +291,6 @@ public class @Controllers : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnSpawn(InputAction.CallbackContext context);
+        void OnPauseresume(InputAction.CallbackContext context);
     }
 }

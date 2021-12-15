@@ -20,6 +20,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold"
+                },
+                {
+                    "name": "pause/resume",
+                    "type": "Button",
+                    "id": "3dfa362a-78c8-4534-9995-75338797298f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -70,7 +78,7 @@
                 {
                     "name": "",
                     "id": "6978c7cd-a5d0-4b16-89ed-8bacf585f7c5",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard/Mouse",
@@ -86,6 +94,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "spawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3628a5c1-922c-44f2-9b15-13921b0455de",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard/Mouse",
+                    "action": "pause/resume",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f80a516-50ab-4d1c-9b41-d36648f3d4db",
+                    "path": "<XInputController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "pause/resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
