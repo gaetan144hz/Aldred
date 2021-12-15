@@ -8,6 +8,8 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] SpriteRenderer spriteRenderer;
 
+    public GameObject gameOverUI;
+
     public GameObject dieEffect;
     //public CameraShake cameraShake;
 
@@ -26,8 +28,14 @@ public class PlayerDeath : MonoBehaviour
             Destroy(this.spriteRenderer);
             Destroy(this.movement);
             Destroy(this.dieEffect);
-            SceneManager.LoadScene(0); 
+            gameOver();
             //SceneManager.LoadScene("nomDeLaScene");
         }
+    }
+
+    public void gameOver()
+    {
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class gameWin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject fireworks;
+    public GameObject fireworks1;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.gameObject.tag == "Player")
+        {
+            fireworks.SetActive(true);
+            fireworks1.SetActive(true);
+        }
     }
 }

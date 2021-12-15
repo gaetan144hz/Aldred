@@ -67,7 +67,7 @@ public class LadderSpawn : MonoBehaviour
     */
     public void ladderSpawn()
     {        
-        lastLadder = Instantiate(ladderPrefab, new Vector3(spawnPoint.position.x + 1f, spawnPoint.position.y), ladderPrefab.transform.rotation);
+        lastLadder = Instantiate(ladderPrefab, new Vector3(spawnPoint.position.x + 0.5f, spawnPoint.position.y), ladderPrefab.transform.rotation);
         rb = lastLadder.GetComponent<Rigidbody2D>();
     }  
     
