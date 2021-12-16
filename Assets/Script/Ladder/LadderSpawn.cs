@@ -34,6 +34,7 @@ public class LadderSpawn : MonoBehaviour
             ladderSpawn();
             isButtonPressed = true;
             StartCoroutine(scaler());
+            GetComponent<Movement>().enabled = false;
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
         if (ctx.performed) //se lance 0.4s après 
@@ -45,6 +46,7 @@ public class LadderSpawn : MonoBehaviour
         {
             isButtonPressed = false;
             rb.bodyType = RigidbodyType2D.Dynamic;
+            GetComponent<Movement>().enabled = true;
             //StartCoroutine(wait());
             return;
         }       

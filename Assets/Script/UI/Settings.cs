@@ -7,6 +7,6 @@ public class Settings : MonoBehaviour
 {
     public void onSettings()
     {
-        SceneManager.LoadScene(4); //Settings
+        SceneManager.LoadScene(3); //Settings
     }
 }
