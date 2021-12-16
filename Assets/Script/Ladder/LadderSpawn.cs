@@ -15,7 +15,10 @@ public class LadderSpawn : MonoBehaviour
     public Rigidbody2D rb;
 
     [SerializeField] private Transform spawnPoint;
-
+    private void Update()
+    {
+        
+    }
     private void Awake()
     {        
         /*quand input performed stop coroutine
