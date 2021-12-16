@@ -13,6 +13,11 @@ public class PlayerDeath : MonoBehaviour
     public GameObject dieEffect;
     //public CameraShake cameraShake;
 
+    private void Update()
+    {
+        
+    }
+
     private void Awake()
     {
         movement = GetComponent<Movement>();

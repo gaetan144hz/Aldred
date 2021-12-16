@@ -1164,7 +1164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9ff802d7563e77a46943bc47c660973f, type: 3}
-  m_Color: {r: 1, g: 0.57254905, b: 0.99501526, a: 1}
+  m_Color: {r: 0.33490568, g: 0.6838857, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatScaler: 0.05
-  ladderPrefab: {fileID: 1683353656628207021, guid: a4a3f292c77cc2d44a5cd69399eb35f8, type: 3}
+  ladderPrefab: {fileID: 7681448494766631003, guid: 4553221404878fc4991f4e2ef24ae903, type: 3}
   lastLadder: {fileID: 0}
   rb: {fileID: 0}
   spawnPoint: {fileID: 4612832224762551598}

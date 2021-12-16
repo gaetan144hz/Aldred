@@ -7,12 +7,15 @@ public class gameWin : MonoBehaviour
     public GameObject fireworks;
     public GameObject fireworks1;
 
+    public GameObject winUI;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             fireworks.SetActive(true);
             fireworks1.SetActive(true);
+            winUI.SetActive(true);
         }
     }
 }
