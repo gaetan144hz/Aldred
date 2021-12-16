@@ -32,7 +32,7 @@ public class PlayerDeath : MonoBehaviour
             //StartCoroutine(cameraShake.Shake(.20f, .8f));
             Destroy(this.spriteRenderer);
             Destroy(this.movement);
-            Destroy(this.dieEffect);
+            Destroy(dieEffect);
             gameOver();
             //SceneManager.LoadScene("nomDeLaScene");
         }

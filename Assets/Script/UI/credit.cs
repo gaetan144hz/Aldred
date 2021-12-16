@@ -7,6 +7,6 @@ public class credit : MonoBehaviour
 {
     public void creditUI()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Credit");
     }
 }
