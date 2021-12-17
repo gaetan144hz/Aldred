@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
+        this.GetComponent<SpriteRenderer>().color = new Color32(86, 181, 255, 255);
         Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody2D>();
     }

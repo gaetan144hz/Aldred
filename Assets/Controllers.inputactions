@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "BaseSprite",
+                    "type": "Button",
+                    "id": "c03c6f61-0d89-4d94-91fb-ed639508f673",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -135,6 +143,17 @@
                     "processors": "",
                     "groups": "Keyboard/Mouse",
                     "action": "ziak",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "083198ad-63a4-4c68-9f98-d305a3735ab3",
+                    "path": "<Keyboard>/quote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard/Mouse",
+                    "action": "BaseSprite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
