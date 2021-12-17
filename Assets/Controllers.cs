@@ -41,6 +41,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ziak"",
+                    ""type"": ""Button"",
+                    ""id"": ""da143161-0f6f-48e4-a93c-e70564687329"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -131,6 +139,17 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""pause/resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f734fee6-791f-4deb-bed8-7299385766f3"",
+                    ""path"": ""<Keyboard>/rightBracket"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard/Mouse"",
+                    ""action"": ""ziak"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -175,6 +194,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_spawn = m_player.FindAction("spawn", throwIfNotFound: true);
         m_player_pauseresume = m_player.FindAction("pause/resume", throwIfNotFound: true);
+        m_player_ziak = m_player.FindAction("ziak", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -227,6 +247,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_spawn;
     private readonly InputAction m_player_pauseresume;
+    private readonly InputAction m_player_ziak;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -234,6 +255,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @spawn => m_Wrapper.m_player_spawn;
         public InputAction @pauseresume => m_Wrapper.m_player_pauseresume;
+        public InputAction @ziak => m_Wrapper.m_player_ziak;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -252,6 +274,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @pauseresume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
                 @pauseresume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
                 @pauseresume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseresume;
+                @ziak.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZiak;
+                @ziak.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZiak;
+                @ziak.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZiak;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -265,6 +290,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @pauseresume.started += instance.OnPauseresume;
                 @pauseresume.performed += instance.OnPauseresume;
                 @pauseresume.canceled += instance.OnPauseresume;
+                @ziak.started += instance.OnZiak;
+                @ziak.performed += instance.OnZiak;
+                @ziak.canceled += instance.OnZiak;
             }
         }
     }
@@ -292,5 +320,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnSpawn(InputAction.CallbackContext context);
         void OnPauseresume(InputAction.CallbackContext context);
+        void OnZiak(InputAction.CallbackContext context);
     }
 }

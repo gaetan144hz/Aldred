@@ -1092,6 +1092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4612832224762551598}
   - component: {fileID: 4612832224762551599}
+  - component: {fileID: 8645744738202196475}
   - component: {fileID: 4612832224762551597}
   - component: {fileID: 4612832224762551596}
   - component: {fileID: 4612832224762551586}
@@ -1100,6 +1101,7 @@ GameObject:
   - component: {fileID: 2893842167430208248}
   - component: {fileID: 4612832224762551593}
   - component: {fileID: 784054843}
+  - component: {fileID: 79476428347131919}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1163,7 +1165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 76f12edcf0d5a3a478f0c32c494a3003, type: 3}
   m_Color: {r: 0.3372549, g: 0.70980394, b: 1, a: 1}
   m_FlipX: 0
@@ -1175,6 +1177,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &8645744738202196475
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4612832224762551587}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2138cc5da1eba404da3c62ccb2b49a60, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!50 &4612832224762551597
 Rigidbody2D:
   serializedVersion: 4
@@ -1264,7 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatScaler: 0.05
+  floatScaler: 0.4
   ladderPrefab: {fileID: 7681448494766631003, guid: 4553221404878fc4991f4e2ef24ae903, type: 3}
   lastLadder: {fileID: 0}
   rb: {fileID: 0}
@@ -1355,6 +1453,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3dfa362a-78c8-4534-9995-75338797298f
     m_ActionName: player/pause/resume[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 79476428347131919}
+        m_TargetAssemblyTypeName: ziakSprite, Assembly-CSharp
+        m_MethodName: onZiak
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: da143161-0f6f-48e4-a93c-e70564687329
+    m_ActionName: player/ziak[/Keyboard/rightBracket]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player
@@ -1379,6 +1493,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &79476428347131919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4612832224762551587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae80e4c0d4945d4408cd3d6a4eb28cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ziak: {fileID: 21300000, guid: 2c56b07a690d2454085be4ccdb902704, type: 3}
+  playerAnimator: {fileID: 784054843}
 --- !u!1 &5075062181681279482
 GameObject:
   m_ObjectHideFlags: 0
