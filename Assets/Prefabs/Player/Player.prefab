@@ -1618,6 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae80e4c0d4945d4408cd3d6a4eb28cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 0}
   ziak: {fileID: 21300000, guid: 2c56b07a690d2454085be4ccdb902704, type: 3}
   playerAnimator: {fileID: 784054843}
   galerie: {fileID: 8645744738202196475}
