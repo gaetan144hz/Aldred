@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2655434666771518839}
   - component: {fileID: 2655434666771518840}
-  - component: {fileID: 891269350}
   - component: {fileID: 6287530781252455695}
+  - component: {fileID: 5213576640644393870}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: MainCamera
@@ -69,7 +69,7 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2655434667907211704}
---- !u!114 &891269350
+--- !u!114 &6287530781252455695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,25 +78,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 2655434666771518841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a5e828b7e8244247bcbd7ba2fe28639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Offset: {x: 0, y: 1.25, z: 0}
-  m_ApplyAfter: 1
-  m_PreserveComposition: 0
---- !u!114 &6287530781252455695
+  cinemachineVirtual: {fileID: 2655434666771518840}
+--- !u!114 &5213576640644393870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2655434666771518841}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5e828b7e8244247bcbd7ba2fe28639, type: 3}
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineVirtual: {fileID: 2655434666771518840}
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 3
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 0
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 11400000, guid: 55e412727c60fca4e8a03a96cde2b138, type: 2}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2655434667907211705
 GameObject:
   m_ObjectHideFlags: 0

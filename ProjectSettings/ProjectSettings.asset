@@ -631,11 +631,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: 2D_BuiltInRenderer
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\gaeta\Documents\Unity\Aldred\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: EcoleGeorgesMelies
+  metroCertificateIssuer: EcoleGeorgesMelies
+  metroCertificateNotAfter: 003976440914d901
   metroApplicationDescription: 2D_BuiltInRenderer
   wsaImages: {}
   metroTileShortName: 

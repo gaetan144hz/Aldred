@@ -6,7 +6,7 @@ using Cinemachine;
 
 public class LadderSpawn : MonoBehaviour
 {
-    //public priorityCam priorityCam;
+    public priorityCam priorityCam;
 
     [SerializeField] private float floatScaler;
     //[SerializeField] private int waiting;
@@ -35,7 +35,7 @@ public class LadderSpawn : MonoBehaviour
         if (ctx.started)// 
         {
             ladderSpawn();
-            //priorityCam.priority9();
+            priorityCam.priority9();
             isButtonPressed = true;
             StartCoroutine(scaler());
             GetComponent<Movement>().enabled = false;
@@ -49,7 +49,7 @@ public class LadderSpawn : MonoBehaviour
         if (ctx.canceled) // appeler quand relaché
         {
             isButtonPressed = false;
-            //priorityCam.priority11();
+            priorityCam.priority11();
             rb.bodyType = RigidbodyType2D.Dynamic;
             GetComponent<Movement>().enabled = true;
             //StartCoroutine(wait());

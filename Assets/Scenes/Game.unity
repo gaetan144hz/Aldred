@@ -6371,7 +6371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.37, y: -4.231182, z: -10}
+  m_LocalPosition: {x: 1.37, y: -5.7611823, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11498,7 +11498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632486011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.7, y: -6.37, z: 0}
+  m_LocalPosition: {x: 119.57, y: -5.14, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22833,6 +22833,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2655434666771518841, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
   m_PrefabInstance: {fileID: 1671418480}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608215031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6287530781252455695, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
+  m_PrefabInstance: {fileID: 1671418480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608215030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5e828b7e8244247bcbd7ba2fe28639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1671418480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22840,10 +22851,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 891269350, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
-      propertyPath: m_Offset.y
-      value: 1.53
-      objectReference: {fileID: 0}
     - target: {fileID: 2655434666771518839, guid: 23201ec4d59722240a1a6da0c2a80f9b, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -23791,6 +23798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7143484874353283495, guid: 27517ce879c3d094eb0d9a432875ff05, type: 3}
+      propertyPath: priorityCam
+      value: 
+      objectReference: {fileID: 1608215031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27517ce879c3d094eb0d9a432875ff05, type: 3}
 --- !u!4 &2134547806 stripped
@@ -23872,7 +23883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6987741618004471604, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987741618004471605, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
       propertyPath: m_Follow
@@ -23930,6 +23941,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6987741618999647227, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: mNoiseOffsets.x
+      value: -534.71094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: mNoiseOffsets.y
+      value: 794.76526
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: mNoiseOffsets.z
+      value: -859.28394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: m_AmplitudeGain
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: m_FrequencyGain
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987741618999647226, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}
+      propertyPath: m_PivotOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb3024d4a3c79244d976be2ec14b2f27, type: 3}

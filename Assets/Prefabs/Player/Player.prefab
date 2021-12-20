@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatScaler: 0.4
+  floatScaler: 0.07
   ladderPrefab: {fileID: 7681448494766631003, guid: 4553221404878fc4991f4e2ef24ae903, type: 3}
   lastLadder: {fileID: 0}
   rb: {fileID: 0}
