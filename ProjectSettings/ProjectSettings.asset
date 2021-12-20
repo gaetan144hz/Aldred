@@ -629,16 +629,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 2D_BuiltInRenderer
-  metroPackageVersion: 
-  metroCertificatePath: C:\Users\gaeta\Documents\Unity\Aldred\Assets\WSATestCertificate.pfx
+  metroPackageName: 2DBuiltInRenderer
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: EcoleGeorgesMelies
   metroCertificateIssuer: EcoleGeorgesMelies
   metroCertificateNotAfter: 003976440914d901
   metroApplicationDescription: 2D_BuiltInRenderer
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Aldred Carton
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

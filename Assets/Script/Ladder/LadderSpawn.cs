@@ -6,7 +6,7 @@ using Cinemachine;
 
 public class LadderSpawn : MonoBehaviour
 {
-    public priorityCam priorityCam;
+    //public priorityCam priorityCam;
 
     [SerializeField] private float floatScaler;
     //[SerializeField] private int waiting;
@@ -14,31 +14,36 @@ public class LadderSpawn : MonoBehaviour
 
     public GameObject ladderPrefab;
     public GameObject lastLadder;
+    public Movement playerMovement;
 
     public Rigidbody2D rb;
 
     [SerializeField] private Transform spawnPoint;
-    private void Update()
-    {
-        
-    }
+    
     private void Awake()
     {
+        playerMovement = GetComponent<Movement>();
         /*quand input performed stop coroutine
         //et quand canceled j'active le rb pour laisser tomber l'echelle rb en kinematic et dynamic quand c 'est relaché
         faire un bool dans une coroutine
         couroutine dans un scritp a part et de l'appeler dans le script du spawn
         */
     }
+
+    private void Update()
+    {
+
+    }
+
     public void OnSpawn(InputAction.CallbackContext ctx)
     {
         if (ctx.started)// 
         {
-            ladderSpawn();
-            priorityCam.priority9();
+            //priorityCam.priority9();
+            playerMovement.enabled = false;
+            ladderSpawn();            
             isButtonPressed = true;
-            StartCoroutine(scaler());
-            GetComponent<Movement>().enabled = false;
+            StartCoroutine(scaler());            
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
         if (ctx.performed) //se lance 0.4s après 
@@ -49,10 +54,10 @@ public class LadderSpawn : MonoBehaviour
         if (ctx.canceled) // appeler quand relaché
         {
             isButtonPressed = false;
-            priorityCam.priority11();
+            playerMovement.enabled = true;
             rb.bodyType = RigidbodyType2D.Dynamic;
-            GetComponent<Movement>().enabled = true;
             //StartCoroutine(wait());
+            //priorityCam.priority11();
             return;
         }       
     }

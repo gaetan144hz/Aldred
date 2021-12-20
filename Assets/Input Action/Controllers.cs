@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Controllers.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input Action/Controllers.inputactions'
 
 using System;
 using System.Collections;
@@ -57,6 +57,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""camSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""6fc3a4d5-1f77-4917-b05c-26417c643296"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -216,12 +224,67 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""6f8523df-126d-4c56-b776-ca7cfd742022"",
+                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox Controller"",
+                    ""action"": ""ziak"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""083198ad-63a4-4c68-9f98-d305a3735ab3"",
                     ""path"": ""<Keyboard>/quote"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard/Mouse"",
                     ""action"": ""BaseSprite"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b74bb868-e9c3-4d8d-94c7-8d361904dc9e"",
+                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox Controller"",
+                    ""action"": ""BaseSprite"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49aaf29d-9eb0-4571-a8a9-0e8324efdde9"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard/Mouse"",
+                    ""action"": ""camSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09a1fbb2-3363-43e7-a06e-41cba5ed93a1"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox Controller"",
+                    ""action"": ""camSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ebe71c7-cb0e-4e18-be86-1f57f8ac844f"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""camSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -281,6 +344,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_pauseresume = m_player.FindAction("pause/resume", throwIfNotFound: true);
         m_player_ziak = m_player.FindAction("ziak", throwIfNotFound: true);
         m_player_BaseSprite = m_player.FindAction("BaseSprite", throwIfNotFound: true);
+        m_player_camSwitch = m_player.FindAction("camSwitch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -335,6 +399,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_pauseresume;
     private readonly InputAction m_player_ziak;
     private readonly InputAction m_player_BaseSprite;
+    private readonly InputAction m_player_camSwitch;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -344,6 +409,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @pauseresume => m_Wrapper.m_player_pauseresume;
         public InputAction @ziak => m_Wrapper.m_player_ziak;
         public InputAction @BaseSprite => m_Wrapper.m_player_BaseSprite;
+        public InputAction @camSwitch => m_Wrapper.m_player_camSwitch;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -368,6 +434,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @BaseSprite.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBaseSprite;
                 @BaseSprite.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBaseSprite;
                 @BaseSprite.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBaseSprite;
+                @camSwitch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamSwitch;
+                @camSwitch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamSwitch;
+                @camSwitch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamSwitch;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -387,6 +456,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @BaseSprite.started += instance.OnBaseSprite;
                 @BaseSprite.performed += instance.OnBaseSprite;
                 @BaseSprite.canceled += instance.OnBaseSprite;
+                @camSwitch.started += instance.OnCamSwitch;
+                @camSwitch.performed += instance.OnCamSwitch;
+                @camSwitch.canceled += instance.OnCamSwitch;
             }
         }
     }
@@ -425,5 +497,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnPauseresume(InputAction.CallbackContext context);
         void OnZiak(InputAction.CallbackContext context);
         void OnBaseSprite(InputAction.CallbackContext context);
+        void OnCamSwitch(InputAction.CallbackContext context);
     }
 }
