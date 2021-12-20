@@ -8,6 +8,7 @@ public class SetFullscreen : MonoBehaviour
 {
     public void Fullscreen(bool isFullscreen)
     {
+        Screen.fullScreen = isFullscreen;
         Debug.Log(isFullscreen);
 
     }
