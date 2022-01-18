@@ -1447,10 +1447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c9b19acb505654380d11826f24f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priorityCam: {fileID: 0}
-  floatScaler: 0.07
+  floatScaler: 0.2
   ladderPrefab: {fileID: 7681448494766631003, guid: 4553221404878fc4991f4e2ef24ae903, type: 3}
   lastLadder: {fileID: 0}
+  playerMovement: {fileID: 0}
   rb: {fileID: 0}
   spawnPoint: {fileID: 4612832224762551598}
 --- !u!114 &2893842167430208248
